@@ -6,6 +6,185 @@
 <title>Sreeja Portfolio</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: #f8f9fa;
+        color: #222;
+    }
+
+    /* ---------------- NAVBAR ---------------- */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        background: #343a40;
+        padding: 12px 0;
+        gap: 30px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .navbar a:hover {
+        color: #ffc107;
+    }
+
+    /* ---------------- HOME SECTION ---------------- */
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 60px;
+        background: white;
+        gap: 40px;
+    }
+    .home-left img,
+    .home-image {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .home-right {
+        width: 50%;
+    }
+    .home-name {
+        font-size: 48px;
+        margin: 0;
+    }
+    .home-title {
+        font-size: 26px;
+        color: #555;
+    }
+    .home-description {
+        font-size: 18px;
+        margin-top: 15px;
+        color: #444;
+    }
+    .home-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #343a40;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .home-btn:hover {
+        background: #ffc107;
+        color: #222;
+    }
+
+    /* ---------------- SKILLS SECTION ---------------- */
+    #skills {
+        padding: 60px;
+        text-align: center;
+    }
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .skill-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 220px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    /* ---------------- PROJECTS SECTION ---------------- */
+    .projects-section {
+        padding: 60px;
+    }
+    .project-category {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+    .project-category .category-image img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .category-content {
+        flex: 1;
+    }
+    .category-content h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .project-block {
+        margin-bottom: 20px;
+    }
+    .project-block h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    .project-block ul {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    /* ---------------- CONTACT ---------------- */
+    #contact {
+        background: #343a40;
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .contact-card p {
+        margin: 10px 0;
+    }
+    .contact-card a {
+        color: #ffc107;
+        text-decoration: none;
+    }
+    .contact-card a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px 0;
+        background: #222;
+        color: white;
+    }
+
+    /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 900px) {
+        .home {
+            flex-direction: column;
+        }
+        .home-right,
+        .home-left {
+            width: 100%;
+        }
+        .home-left img {
+            height: 300px;
+        }
+        .project-category {
+            flex-direction: column;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -20,7 +199,7 @@
 <!-- ===== HOME SECTION ===== -->
 <section id="home" class="home">
   <div class="home-left">
-      <img src="images/port1.jpg" alt="Sreeja Image" class="home-image">
+      <img src="assets/images/home-profile.jpg" alt="Sreeja Image" class="home-image">
   </div>
 
   <div class="home-right">
@@ -28,15 +207,14 @@
       <h2 class="home-title">Boomi Integration Developer</h2>
 
       <p class="home-description">
-        Integration Developer specializing in Boomi Integration, MDH, Flow & EDI.
-        Experienced in system integrations, ETL pipelines, and enterprise automation.
+        Hands-on experience in Boomi Integration, MDH, Flow, and EDI.
+        Skilled in enterprise integrations, master data management, 
+        API workflows, and cross-platform automation.
       </p>
 
       <a href="#projects" class="home-btn">View Projects</a>
   </div>
 </section>
-
-
 
 <!-- SKILLS SECTION -->
 <section id="skills">
@@ -86,174 +264,112 @@
   </div>
 </section>
 
-
 <!-- ===== PROJECTS SECTION ===== -->
-<section class="projects-section">
+<section id="projects" class="projects-section">
 
-  <!-- ================= MDH PROJECTS ================= -->
+  <!-- MDH PROJECTS -->
   <div class="project-category">
     <div class="category-image">
-      <img src="images/mdh-projects.jpg" alt="MDH Projects">
+      <img src="assets/images/mdh-projects.jpg" alt="MDH Projects">
     </div>
     <div class="category-content">
-      <h2>Enterprise Master Data Hub Projects</h2>
-
-      <div class="project-block">
-        <h3>Crumdale – Master Data Hub Integrations</h3>
-        <p><strong>Role:</strong> Integration Developer</p>
-        <p><strong>Duration:</strong> Jul 2025 – Nov 2025</p>
-        <p><strong>Tech:</strong> Boomi Integration, Boomi MDH, Salesforce, UGAN Data</p>
-        <ul>
-          <li>Designed Customer MDH model and contributor relationships in a 2-member team.</li>
-          <li>Developed integrations for UGAN Data, SalesOrder, and Salesforce Accounts.</li>
-          <li>Maintained consolidated and validated master data across systems.</li>
-        </ul>
-      </div>
-
-      <div class="project-block">
-        <h3>Total Resource Management – MDH & Enterprise Integrations</h3>
-        <p><strong>Role:</strong> Integration Developer</p>
-        <p><strong>Duration:</strong> Jun 2025 – Present</p>
-        <p><strong>Tech:</strong> Boomi MDH, Boomi Integration, Salesforce, NetSuite</p>
-        <ul>
-          <li>Designed Customer MDH Model with two-way Salesforce ↔ NetSuite contributor sync.</li>
-          <li>Implemented bi-directional Contact flows.</li>
-          <li>Developed Employee, Time-Off, Timesheet, Estimates integrations.</li>
-          <li>Ensured governance and MDH data quality using rules & validations.</li>
-        </ul>
-      </div>
-
-      <div class="project-block">
-        <h3>Cvent Master Data Hub Integration</h3>
-        <p><strong>Tech:</strong> Boomi MDH</p>
-        <ul>
-          <li>Designed MDH models with contributor relationships.</li>
-          <li>Implemented data quality rules for validation and standardization.</li>
-          <li>Streamlined synchronization across multiple systems.</li>
-        </ul>
-      </div>
+      <h2>Master Data Hub (MDH) – Projects</h2>
+      <ul>
+        <li>
+          <strong>Total Resource Management – Bi-Directional Contact Flow</strong><br>
+          Built bi-directional contact sync between NetSuite ↔ Salesforce including validation,
+          onboarding rules, survivorship, and stewardship workflow.
+        </li>
+        <li>
+          <strong>Homestar Workflow Orchestration</strong><br>
+          Customer master data consolidation, golden-record creation,
+          ingestion cleanup, enrichment, and hub transformations.
+        </li>
+        <li>
+          <strong>Cvent Master Data Hub Integration</strong><br>
+          Designed MDH models with contributor relationships.
+          Implemented data quality rules for validation and standardization.
+          Streamlined synchronization across multiple systems.
+        </li>
+      </ul>
     </div>
   </div>
 
-  <!-- ================= POC PROJECTS ================= -->
+  <!-- INTEGRATION PROJECTS -->
   <div class="project-category">
     <div class="category-image">
-      <img src="images/poc-projects.jpg" alt="POC Projects">
+      <img src="assets/images/integration-project.jpg" alt="Integration Projects">
     </div>
     <div class="category-content">
-      <h2>Proof of Concept (POC) Implementations</h2>
-
-      <div class="project-block">
-        <h3>BigCommerce → Salesforce Data Pipeline (Rivery POC)</h3>
-        <p><strong>Tech:</strong> Rivery.io</p>
-        <ul>
-          <li>Configured extraction from BigCommerce and loading into Salesforce.</li>
-          <li>Designed ETL transformations and schema mapping.</li>
-          <li>Validated incremental sync with error handling.</li>
-        </ul>
-      </div>
-
-      <div class="project-block">
-        <h3>Boomi Master Data Hub (MDH) – Employee & Contact POC</h3>
-        <p><strong>Tech:</strong> Boomi MDH</p>
-        <ul>
-          <li>Designed Employee and Contact MDH models with reference relationships.</li>
-          <li>Implemented MDH validations and standardization rules.</li>
-          <li>Developed real-time synchronization listeners.</li>
-          <li>Demonstrated full MDH lifecycle in POC demo.</li>
-        </ul>
-      </div>
-
+      <h2>Integration – End-to-End Data Pipelines</h2>
+      <ul>
+        <li>
+          <strong>Solo Brands – OMS to Snowflake Integration</strong><br>
+          Developed order sync with pagination, batching, error handling, 
+          and mapping into Snowflake optimized schema.
+        </li>
+        <li>
+          <strong>BizTalk to Boomi Migration</strong><br>
+          Rebuilt orchestrations into Boomi flows using caching, retries, 
+          and scalable workflow automation.
+        </li>
+      </ul>
     </div>
   </div>
 
-  <!-- ================= FLOW PROJECTS ================= -->
+  <!-- EDI PROJECTS -->
   <div class="project-category">
     <div class="category-image">
-      <img src="images/flow-project.jpg" alt="Flow Projects">
+      <img src="assets/images/edi-project.jpg" alt="EDI Projects">
     </div>
     <div class="category-content">
-      <h2>Workflow Automation Projects</h2>
-
-      <div class="project-block">
-        <h3>Flow – Trading Partner Automation</h3>
-        <p><strong>Role:</strong> Boomi Flow Developer</p>
-        <p><strong>Duration:</strong> May 2025 – Jul 2025</p>
-        <p><strong>Tech:</strong> Boomi Flow, AtomSphere APIs, EDI</p>
-        <ul>
-          <li>Designed UI for Trading Partner onboarding.</li>
-          <li>Triggered AtomSphere APIs to automate Partner Setup.</li>
-          <li>Reduced manual work by 30% through automation.</li>
-          <li>Improved accuracy & reliability in EDI onboarding.</li>
-        </ul>
-      </div>
-
+      <h2>EDI – B2B & Partner Integrations</h2>
+      <ul>
+        <li>
+          <strong>EDI 850 / 810 / 997 Transactions</strong><br>
+          Partner integrations with mapping, schema validation, and automated acknowledgments.
+        </li>
+        <li>
+          <strong>Retail Supply Chain EDI Automation</strong><br>
+          Reusable EDI templates with alerts, logging, and retry/error handling.
+        </li>
+      </ul>
     </div>
   </div>
 
-  <!-- ================= EDI PROJECTS ================= -->
+  <!-- FLOW PROJECTS -->
   <div class="project-category">
     <div class="category-image">
-      <img src="images/edi-project.jpg" alt="EDI Projects">
+      <img src="assets/images/flow-project.jpg" alt="Flow Projects">
     </div>
     <div class="category-content">
-      <h2>EDI Integration Projects</h2>
-
-      <div class="project-block">
-        <h3>Ramsell EDI Migration</h3>
-        <p><strong>Role:</strong> Integration Developer</p>
-        <p><strong>Duration:</strong> Mar 2024 – Aug 2024</p>
-        <p><strong>Tech:</strong> Boomi, BizTalk, SQL Database</p>
-        <ul>
-          <li>Migrated 850, 855, 810 BizTalk integrations into Boomi.</li>
-          <li>Optimized SQL queries and EDI mappings.</li>
-          <li>Automated nightly execution of 10–15 EDI files.</li>
-          <li>Supported the development team in production deployments.</li>
-        </ul>
-      </div>
-
+      <h2>Boomi Flow – UI, Approvals & Workflow Automation</h2>
+      <ul>
+        <li>
+          <strong>Custom Contact Approval UI</strong><br>
+          Built responsive Flow UI with decision routing, approvals, audit logging,
+          and backend API integrations.
+        </li>
+      </ul>
     </div>
   </div>
 
-  <!-- ================= INTEGRATION PROJECTS ================= -->
+  <!-- POC PROJECTS -->
   <div class="project-category">
     <div class="category-image">
-      <img src="images/integration-project.jpg" alt="Integration Projects">
+      <img src="assets/images/poc-projects.jpg" alt="POC Projects">
     </div>
     <div class="category-content">
-      <h2>System Integration Projects</h2>
-
-      <div class="project-block">
-        <h3>Orion Integration Project</h3>
-        <p><strong>Role:</strong> Integration Developer</p>
-        <p><strong>Duration:</strong> Feb 2025 – Jun 2025</p>
-        <p><strong>Tech:</strong> Dell Boomi, REST APIs, JSON, Conscious Swagger, Darwin API</p>
-        <ul>
-          <li>Developed employee, customer & project sync integrations.</li>
-          <li>Aligned integration development with requirement documentation.</li>
-          <li>Delivered stable integrations to production with minimal rework.</li>
-        </ul>
-      </div>
-
-      <div class="project-block">
-        <h3>Solo Brands – OMS to Snowflake Integration</h3>
-        <p><strong>Role:</strong> Boomi Integration Developer</p>
-        <p><strong>Duration:</strong> Mar 2024 – Apr 2025</p>
-        <p><strong>Tech:</strong> Boomi, MDH, REST APIs, Snowflake</p>
-        <ul>
-          <li>Developed 11 sub-integrations as part of OMS → Snowflake migration.</li>
-          <li>Built ETL flows loading data into 11 Snowflake tables.</li>
-          <li>Part of a 4-member team for development, testing & support.</li>
-          <li>Implemented logging, monitoring & fault-tolerant flows.</li>
-        </ul>
-      </div>
-
+      <h2>Proof-of-Concept (POC) Implementations</h2>
+      <ul>
+        <li><strong>AI MDH Cleanup Model</strong> – basic matching logic using scripting</li>
+        <li><strong>API-First Customer Sync</strong> – real-time REST based orchestration</li>
+        <li><strong>Inventory Sync POC</strong> – conditional routing + performance optimization</li>
+      </ul>
     </div>
   </div>
 
 </section>
-
-
 
 <!-- CONTACT -->
 <section id="contact">
