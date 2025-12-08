@@ -252,66 +252,84 @@ footer p {
 .about-text {
   max-width: 600px;
 }
-.home {
+/* ===== HOME SECTION ===== */
+
+.home-section {
+  width: 90%;
+  margin: auto;
+  padding: 40px 0 80px;
+}
+
+.home-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 50px;
-  background: #eaf0fc; /* light background */
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.home-left {
-  flex: 1;
-  min-width: 300px;
-}
-
-.home-left img.home-image {
-  width: 100%;
+/* LEFT IMAGE */
+.home-image img {
+  width: 50vw;           /* half of the screen width */
+  max-width: 550px;
   height: auto;
-  border-radius: 0; /* remove round shape */
+  border-radius: 12px;   /* NOT fully rounded */
   object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-.home-right {
+/* RIGHT CONTENT */
+.home-content {
   flex: 1;
-  min-width: 300px;
-  padding-left: 30px;
 }
 
 .home-name {
-  color: #000; /* black color for name */
-  font-size: 3em;
-  margin: 0;
+  font-size: 55px;
+  font-weight: 800;
+  color: black;          /* YOU REQUESTED BLACK */
+  margin-bottom: 10px;
 }
 
-.home-title {
-  color: #333;
-  font-size: 1.5em;
-  margin: 10px 0;
+.home-role {
+  font-size: 26px;
+  color: #444;
+  margin-bottom: 20px;
 }
 
-.home-description {
-  font-size: 1em;
+.home-summary {
+  font-size: 18px;
   line-height: 1.6;
-  color: #555;
+  margin-bottom: 35px;
+  color: #333;
 }
 
-@media (max-width: 900px) {
-.home {
-flex-direction: column-reverse;
-text-align: center;
-padding: 4rem 5%;
+.home-btn {
+  padding: 14px 24px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
 }
-.home-right {
-padding-left: 0;
-margin-bottom: 2rem;
+
+.home-btn:hover {
+  background: #333;
 }
-.home-image {
-width: 200px;
-height: 200px;
-margin-bottom: 1.5rem;
-}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-image img {
+    width: 100%;
+  }
+
+  .home-name {
+    font-size: 40px;
+  }
 }
 
 .projects-section {
