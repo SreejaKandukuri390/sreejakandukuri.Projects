@@ -304,3 +304,64 @@ height: 200px;
 margin-bottom: 1.5rem;
 }
 }
+/* Project Section Styles */
+.project-section {
+    margin-bottom: 6rem;
+}
+
+.project-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.project-card {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: center;
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+}
+
+.project-card img {
+    width: 40%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-content p,
+.project-content ul {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.project-content ul {
+    padding-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-card img {
+        width: 80%;
+        margin-bottom: 1.5rem;
+    }
+}
+
