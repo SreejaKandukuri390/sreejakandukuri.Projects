@@ -253,41 +253,50 @@ footer p {
   max-width: 600px;
 }
 .home {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 6rem 10%;
-background: linear-gradient(to right, #ffffff, #e6f0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #eaf0fc; /* light background */
+  flex-wrap: wrap;
 }
+
 .home-left {
-flex: 1;
+  flex: 1;
+  min-width: 300px;
 }
+
+.home-left img.home-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0; /* remove round shape */
+  object-fit: cover;
+}
+
 .home-right {
-flex: 1;
-padding-left: 2rem;
+  flex: 1;
+  min-width: 300px;
+  padding-left: 30px;
 }
-.home-image {
-width: 300px;
-height: 300px;
-border-radius: 50%;
-object-fit: cover;
-box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
+
 .home-name {
-font-size: 3rem;
-font-weight: bold;
-margin-bottom: 1rem;
+  color: #000; /* black color for name */
+  font-size: 3em;
+  margin: 0;
 }
+
 .home-title {
-font-size: 1.8rem;
-margin-bottom: 1.5rem;
-color: #555;
+  color: #333;
+  font-size: 1.5em;
+  margin: 10px 0;
 }
+
 .home-description {
-font-size: 1.1rem;
-line-height: 1.6;
-color: #444;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
 }
+
 @media (max-width: 900px) {
 .home {
 flex-direction: column-reverse;
