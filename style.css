@@ -386,3 +386,96 @@ footer p {
   }
 }
 
+/* Prevent nav from overlapping content */
+header, #home {
+   padding-top: 100px;
+}
+
+/* Fix home section layout */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px;
+}
+
+.home-left {
+  flex: 1;
+}
+
+.home-right {
+  flex: 1;
+}
+
+/* Image adjustments */
+.home-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+/* Ensure text is visible */
+.home-name, 
+.home-title, 
+.home-description {
+  color: black !important;
+}
+
+/* CTA button */
+.home-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Project sections */
+.project-section {
+  padding: 60px 40px;
+}
+
+.project-banner img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* List of project cards */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Project cards */
+.project-list .card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.project-role,
+.project-duration,
+.project-tech {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.project-list ul {
+  margin-left: 20px;
+}
