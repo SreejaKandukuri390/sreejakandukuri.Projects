@@ -4,15 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sreeja Portfolio</title>
-<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
     body {
         margin: 0;
         font-family: Arial, sans-serif;
         line-height: 1.6;
-        background: #f8f9fa;
         color: #222;
+        scroll-behavior: smooth;
     }
 
     /* ---------------- NAVBAR ---------------- */
@@ -30,6 +29,7 @@
         color: white;
         text-decoration: none;
         font-weight: bold;
+        transition: color 0.3s;
     }
     .navbar a:hover {
         color: #ffc107;
@@ -41,7 +41,7 @@
         align-items: center;
         justify-content: space-around;
         padding: 60px;
-        background: white;
+        background: linear-gradient(135deg, #d9f0ff, #a0d8ff); /* gradient for home */
         gap: 40px;
     }
     .home-left img,
@@ -50,6 +50,7 @@
         height: 420px;
         object-fit: cover;
         border-radius: 10px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
     .home-right {
         width: 50%;
@@ -70,20 +71,24 @@
     .home-btn {
         display: inline-block;
         margin-top: 20px;
-        padding: 10px 20px;
+        padding: 12px 25px;
         background: #343a40;
         color: white;
         text-decoration: none;
         border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s;
     }
     .home-btn:hover {
         background: #ffc107;
         color: #222;
+        transform: scale(1.05);
     }
 
     /* ---------------- SKILLS SECTION ---------------- */
     #skills {
         padding: 60px;
+        background: linear-gradient(135deg, #fff3e6, #ffd9b3); /* gradient for skills */
         text-align: center;
     }
     .skills-container {
@@ -98,8 +103,13 @@
         padding: 20px;
         border-radius: 10px;
         width: 220px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         text-align: center;
+        transition: all 0.3s;
+    }
+    .skill-card:hover {
+        transform: translateY(-7px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     }
 
     /* ---------------- PROJECTS SECTION ---------------- */
@@ -111,16 +121,22 @@
         gap: 30px;
         margin-bottom: 50px;
         flex-wrap: wrap;
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        transition: all 0.3s;
+        position: relative;
+    }
+    .project-category:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
     .project-category .category-image img {
         width: 100%;
         height: 260px;
         object-fit: cover;
         border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     .category-content {
         flex: 1;
@@ -129,6 +145,12 @@
         font-size: 28px;
         margin-bottom: 20px;
         font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .category-content h2 i {
+        color: #343a40;
     }
     .project-block {
         margin-bottom: 20px;
@@ -141,6 +163,23 @@
     .project-block ul {
         margin-left: 20px;
         margin-top: 10px;
+    }
+
+    /* Background gradients for project categories */
+    .mdh-project {
+        background: linear-gradient(135deg, #e8f4f8, #b0e0ff);
+    }
+    .integration-project {
+        background: linear-gradient(135deg, #f9f2e8, #ffe0b3);
+    }
+    .edi-project {
+        background: linear-gradient(135deg, #f0e8f9, #d6b3ff);
+    }
+    .flow-project {
+        background: linear-gradient(135deg, #e8f9ec, #a8f0c6);
+    }
+    .poc-project {
+        background: linear-gradient(135deg, #f9e8e8, #ffb3b3);
     }
 
     /* ---------------- CONTACT ---------------- */
@@ -201,17 +240,14 @@
   <div class="home-left">
       <img src="images/port1.jpg" alt="Sreeja Image" class="home-image">
   </div>
-
   <div class="home-right">
       <h1 class="home-name">Sreeja Kandukuri</h1>
       <h2 class="home-title">Boomi Integration Developer</h2>
-
       <p class="home-description">
         Hands-on experience in Boomi Integration, MDH, Flow, and EDI.
         Skilled in enterprise integrations, master data management, 
         API workflows, and cross-platform automation.
       </p>
-
       <a href="#projects" class="home-btn">View Projects</a>
   </div>
 </section>
@@ -220,73 +256,58 @@
 <section id="skills">
   <h2>Skills</h2>
   <div class="skills-container">
-
     <div class="skill-card">
       <h3>Integration & iPaaS</h3>
       <p>Boomi (Integration, MDH, Flow, EDI), Celigo, Rivery, MuleSoft</p>
     </div>
-
     <div class="skill-card">
       <h3>APIs & Data</h3>
       <p>REST, SOAP, JSON, XML, SQL, Web APIs, OAuth 2.0</p>
     </div>
-
     <div class="skill-card">
       <h3>Programming Languages</h3>
       <p>Python, C, SQL, Java, Groovy Script, HTML, CSS, Data Structures</p>
     </div>
-
     <div class="skill-card">
       <h3>Frameworks</h3>
       <p>Pandas, NumPy</p>
     </div>
-
     <div class="skill-card">
       <h3>Platforms</h3>
       <p>Salesforce, BigCommerce, Paycom, NetSuite, NetSuite OpenAir</p>
     </div>
-
     <div class="skill-card">
       <h3>Cloud</h3>
       <p>AWS (Lambda, S3, EC2, API Gateway)</p>
     </div>
-
     <div class="skill-card">
       <h3>Databases</h3>
       <p>Snowflake, MySQL</p>
     </div>
-
     <div class="skill-card">
       <h3>Tools & Technologies</h3>
       <p>Postman, Swagger, Git/GitHub, VS Code, XSLT</p>
     </div>
-
   </div>
 </section>
 
 <!-- ===== PROJECTS SECTION ===== -->
 <section id="projects" class="projects-section">
-
   <!-- MDH PROJECTS -->
-  <div class="project-category">
-    <div class="category-image">
-      <img src="images/mdh-projects.jpg" alt="MDH Projects">
-    </div>
+  <div class="project-category mdh-project">
+    <div class="category-image"><img src="images/mdh-projects.jpg" alt="MDH Projects"></div>
     <div class="category-content">
-      <h2>Master Data Hub (MDH) – Projects</h2>
+      <h2><i class="fas fa-database"></i> Master Data Hub (MDH) – Projects</h2>
       <ul>
-        <li>
-          <strong>Total Resource Management – Bi-Directional Contact Flow</strong><br>
+        <li><strong>Total Resource Management – Bi-Directional Contact Flow</strong><br>
           Built bi-directional contact sync between NetSuite ↔ Salesforce including validation,
           onboarding rules, survivorship, and stewardship workflow.
         </li>
-        <li>
-          <strong>Homestar Workflow Orchestration</strong><br>
+        <li><strong>Homestar Workflow Orchestration</strong><br>
           Customer master data consolidation, golden-record creation,
           ingestion cleanup, enrichment, and hub transformations.
         </li>
-        <li>
-          <strong>Cvent Master Data Hub Integration</strong><br>
+        <li><strong>Cvent Master Data Hub Integration</strong><br>
           Designed MDH models with contributor relationships.
           Implemented data quality rules for validation and standardization.
           Streamlined synchronization across multiple systems.
@@ -296,20 +317,16 @@
   </div>
 
   <!-- INTEGRATION PROJECTS -->
-  <div class="project-category">
-    <div class="category-image">
-      <img src="images/integration-project.jpg" alt="Integration Projects">
-    </div>
+  <div class="project-category integration-project">
+    <div class="category-image"><img src="images/integration-project.jpg" alt="Integration Projects"></div>
     <div class="category-content">
-      <h2>Integration – End-to-End Data Pipelines</h2>
+      <h2><i class="fas fa-project-diagram"></i> Integration – End-to-End Data Pipelines</h2>
       <ul>
-        <li>
-          <strong>Solo Brands – OMS to Snowflake Integration</strong><br>
+        <li><strong>Solo Brands – OMS to Snowflake Integration</strong><br>
           Developed order sync with pagination, batching, error handling, 
           and mapping into Snowflake optimized schema.
         </li>
-        <li>
-          <strong>BizTalk to Boomi Migration</strong><br>
+        <li><strong>BizTalk to Boomi Migration</strong><br>
           Rebuilt orchestrations into Boomi flows using caching, retries, 
           and scalable workflow automation.
         </li>
@@ -318,19 +335,15 @@
   </div>
 
   <!-- EDI PROJECTS -->
-  <div class="project-category">
-    <div class="category-image">
-      <img src="images/edi-project.jpg" alt="EDI Projects">
-    </div>
+  <div class="project-category edi-project">
+    <div class="category-image"><img src="images/edi-project.jpg" alt="EDI Projects"></div>
     <div class="category-content">
-      <h2>EDI – B2B & Partner Integrations</h2>
+      <h2><i class="fas fa-exchange-alt"></i> EDI – B2B & Partner Integrations</h2>
       <ul>
-        <li>
-          <strong>EDI 850 / 810 / 855Transactions</strong><br>
+        <li><strong>EDI 850 / 810 / 997 Transactions</strong><br>
           Partner integrations with mapping, schema validation, and automated acknowledgments.
         </li>
-        <li>
-          <strong>Retail Supply Chain EDI Automation</strong><br>
+        <li><strong>Retail Supply Chain EDI Automation</strong><br>
           Reusable EDI templates with alerts, logging, and retry/error handling.
         </li>
       </ul>
@@ -338,15 +351,12 @@
   </div>
 
   <!-- FLOW PROJECTS -->
-  <div class="project-category">
-    <div class="category-image">
-      <img src="assets/images/flow-project.jpg" alt="Flow Projects">
-    </div>
+  <div class="project-category flow-project">
+    <div class="category-image"><img src="images/flow-project.jpg" alt="Flow Projects"></div>
     <div class="category-content">
-      <h2>Boomi Flow – UI, Approvals & Workflow Automation</h2>
+      <h2><i class="fas fa-cogs"></i> Boomi Flow – UI, Approvals & Workflow Automation</h2>
       <ul>
-        <li>
-          <strong>Custom Contact Approval UI</strong><br>
+        <li><strong>Custom Contact Approval UI</strong><br>
           Built responsive Flow UI with decision routing, approvals, audit logging,
           and backend API integrations.
         </li>
@@ -355,12 +365,10 @@
   </div>
 
   <!-- POC PROJECTS -->
-  <div class="project-category">
-    <div class="category-image">
-      <img src="images/poc-projects.jpg" alt="POC Projects">
-    </div>
+  <div class="project-category poc-project">
+    <div class="category-image"><img src="images/poc-projects.jpg" alt="POC Projects"></div>
     <div class="category-content">
-      <h2>Proof-of-Concept (POC) Implementations</h2>
+      <h2><i class="fas fa-flask"></i> Proof-of-Concept (POC) Implementations</h2>
       <ul>
         <li><strong>AI MDH Cleanup Model</strong> – basic matching logic using scripting</li>
         <li><strong>API-First Customer Sync</strong> – real-time REST based orchestration</li>
@@ -375,17 +383,8 @@
 <section id="contact">
   <h2>Contact</h2>
   <div class="card contact-card">
-    <p>
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:sreeja.kandukuri2502@gmail.com">sreeja.kandukuri2502@gmail.com</a>
-    </p>
-
-    <p>
-      <i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/sreeja-kandukuri-225a91262/" target="_blank">
-        linkedin.com/in/sreeja-kandukuri-225a91262
-      </a>
-    </p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:sreeja.kandukuri2502@gmail.com">sreeja.kandukuri2502@gmail.com</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/sreeja-kandukuri-225a91262/" target="_blank">linkedin.com/in/sreeja-kandukuri-225a91262</a></p>
   </div>
 </section>
 
