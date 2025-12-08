@@ -8,33 +8,39 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-<nav>
+
+<!-- Navigation -->
+<nav class="navbar">
   <a href="#home">Home</a>
-  <a href="#about">About</a>
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
-<header>
+
+<!-- HOME SECTION -->
 <section id="home" class="home">
-<div class="home-left">
-    <img src="images/port1.jpg" alt="Sreeja Image" class="home-image" />
+  <div class="home-left">
+    <img src="images/port1.jpg" alt="Sreeja Image" class="home-image">
   </div>
+
   <div class="home-right">
     <h1 class="home-name">Sreeja Kandukuri</h1>
     <h2 class="home-title">Boomi Integration Developer</h2>
-    <p class="home-description">Specialized in Integration, MDH, Flow, and EDI with real-time problem-solving skills and hands-on experience delivering production-ready workflows.</p>
+    <p class="home-description">
+      Specialized in Integration, MDH, Flow, and EDI with real-time problem-solving skills and hands-on experience delivering production-ready workflows.
+    </p>
   </div>
 </section>
-</header>
 
 
+<!-- SKILLS SECTION -->
 <section id="skills">
   <h2>Skills</h2>
   <div class="skills-container">
+
     <div class="skill-card">
       <h3>Integration & iPaaS</h3>
-      <p>Boomi (Integration, MDH, Flow, EDI), Celigo, Rivery, MuleSoft </p>
+      <p>Boomi (Integration, MDH, Flow, EDI), Celigo, Rivery, MuleSoft</p>
     </div>
 
     <div class="skill-card">
@@ -76,21 +82,26 @@
 </section>
 
 
-<!-- DataHub Projects -->
+<!-- PROJECTS SECTIONS START -->
+<section id="projects">
+
+<!-- MDH PROJECTS -->
 <section class="project-section">
   <h2>Enterprise DataHub Projects</h2>
-  <div>
-    <img src="images/mdh-projects.jpg" alt="DataHub Projects">
+
+  <div class="project-card">
+    <img src="images/mdh-projects.jpg" alt="MDH Projects">
+
     <div class="project-content">
+
       <div class="card">
         <div class="project-title">Crumdale – Master Data Hub Integrations</div>
         <div class="project-role">Role: Integration Developer</div>
         <div class="project-duration">Duration: Jul 2025 – Nov 2025</div>
         <div class="project-tech">Tech: Boomi Integration, Boomi MDH, Salesforce, UGAN Data</div>
         <ul>
-          <li>Designed Customer MDH model and contributor relationships in a 2-member team.</li>
+          <li>Designed Customer MDH model and contributor relationships.</li>
           <li>Developed integrations for UGAN Data, SalesOrder, and Salesforce Accounts.</li>
-          <li>Maintained consolidated data in MDH and ensured accuracy and synchronization across systems.</li>
         </ul>
       </div>
 
@@ -100,10 +111,8 @@
         <div class="project-duration">Duration: Jun 2025 – Present</div>
         <div class="project-tech">Tech: Boomi MDH, Boomi Integration, Salesforce, NetSuite</div>
         <ul>
-          <li>Designed Customer MDH Model to support two-way contributor sync between Salesforce and NetSuite, including bi-directional Contact flows.</li>
-          <li>Developed integrations for Employee, Time-Off, Timesheet, Estimates, and bi-directional Contact flows.</li>
-          <li>Collaborated in a 4-member team on design, development, testing, and deployment.</li>
-          <li>Maintained clean, validated master data using MDH rules and mapping standards.</li>
+          <li>Designed Customer MDH with 2-way Salesforce ↔ NetSuite sync including bi-directional Contact flows.</li>
+          <li>Developed Integrations for Employee, Time-Off, Timesheet, Estimates.</li>
         </ul>
       </div>
 
@@ -111,136 +120,123 @@
         <div class="project-title">Cvent Master Data Hub Integration</div>
         <div class="project-tech">Tech: Boomi MDH</div>
         <ul>
-          <li>Designed and maintained master data models with contributor relationships.</li>
-          <li>Implemented data quality rules and ensured seamless synchronization across systems.</li>
-          <li>Applied Boomi MDH best practices to enhance data governance and reduce duplication.</li>
+          <li>Created contributor models and implemented validation rules.</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- POCs -->
+
+<!-- POC PROJECTS -->
 <section class="project-section">
   <h2>Proof of Concept (POC) Projects</h2>
+
   <div class="project-card">
-    <img src="images/poc-projects.jpg" alt="POC Projects">
+    <img src="images/poc-project.jpg" alt="POC Projects">
+
     <div class="project-content">
+
       <div class="card">
-        <div class="project-title">BigCommerce → Salesforce Data Pipeline (Rivery POC)</div>
+        <div class="project-title">BigCommerce → Salesforce Pipeline (Rivery)</div>
         <div class="project-tech">Tech: Rivery.io</div>
         <ul>
-          <li>Configured data pipeline to extract from BigCommerce and load into Salesforce.</li>
-          <li>Implemented transformations, schema mapping, validation, and scheduled orchestrations.</li>
-          <li>Ensured real-time and incremental synchronization with error handling for POC success.</li>
+          <li>Configured pipeline to extract BigCommerce data and push into Salesforce.</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="project-title">Boomi Master Data Hub (MDH) – Employee & Contact POC</div>
-        <div class="project-tech">Tech: Boomi MDH</div>
+        <div class="project-title">Boomi MDH – Employee & Contact POC</div>
         <ul>
-          <li>Designed and configured Employee and Contact MDH models with reference relationships.</li>
-          <li>Implemented data quality rules for validation, transformation, and standardization.</li>
-          <li>Built listener processes for real-time synchronization and error handling.</li>
-          <li>Delivered end-to-end MDH demo showcasing configuration, workflows, and data lifecycle.</li>
+          <li>Designed Employee & Contact MDH models with reference relationships.</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- FLOW Projects -->
+
+<!-- FLOW PROJECTS -->
 <section class="project-section">
   <h2>Workflow Automation Projects</h2>
+
   <div class="project-card">
     <img src="images/flow-project.jpg" alt="Flow Projects">
+
     <div class="project-content">
+
       <div class="card">
         <div class="project-title">Flow – Trading Partner Automation</div>
-        <div class="project-role">Role: Boomi Flow Developer</div>
-        <div class="project-duration">Duration: May 2025 – Jul 2025</div>
-        <div class="project-tech">Tech: Boomi Flow, AtomSphere APIs, EDI</div>
         <ul>
-          <li>Independently designed Flow UI for Trading Partner onboarding.</li>
-          <li>Triggered AtomSphere APIs on form submission to standardize partner setup and eliminate manual tasks.</li>
-          <li>Automated Trading Partner creation, reducing manual effort by 30% and improving accuracy.</li>
-          <li>Enhanced EDI project efficiency and ensured reliable automated data processing.</li>
+          <li>Designed UI and automated partner onboarding using AtomSphere APIs.</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- EDI Projects -->
+
+<!-- EDI PROJECTS -->
 <section class="project-section">
   <h2>EDI Integration Projects</h2>
+
   <div class="project-card">
     <img src="images/edi-project.jpg" alt="EDI Projects">
+
     <div class="project-content">
+
       <div class="card">
         <div class="project-title">Ramsell EDI Migration</div>
-        <div class="project-role">Role: Integration Developer</div>
-        <div class="project-duration">Duration: Mar 2024 – Aug 2024</div>
-        <div class="project-tech">Tech: Boomi, BizTalk, SQL Database</div>
         <ul>
-          <li>Migrated legacy BizTalk integrations to Boomi, supporting EDI processing (850, 855, 810 transactions).</li>
-          <li>Developed mappings, optimized SQL queries, and deployed integrations independently.</li>
-          <li>Automated nightly execution of 10–15 EDI 850, 855, 810 files, improving processing efficiency by 30%.</li>
-          <li>Provided additional support to team members to ensure timely deployment.</li>
+          <li>Migrated legacy BizTalk EDI flows (850, 855, 810) to Boomi.</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Integration Projects -->
+
+<!-- SYSTEM INTEGRATION PROJECTS -->
 <section class="project-section">
   <h2>System Integration Projects</h2>
+
   <div class="project-card">
     <img src="images/integration-project.jpg" alt="Integration Projects">
+
     <div class="project-content">
+
       <div class="card">
         <div class="project-title">Orion Integration Project</div>
-        <div class="project-role">Role: Integration Developer</div>
-        <div class="project-duration">Duration: Feb 2025 – Jun 2025</div>
-        <div class="project-tech">Tech: Dell Boomi, REST APIs, JSON, Conscious Swagger, Darwin API</div>
         <ul>
-          <li>Developed integration flows for employee, project, and customer data synchronization between Darwin and Conscious APIs.</li>
-          <li>Collaborated with senior developers to align client expectations and technical development.</li>
-          <li>Designed, developed, and deployed integrations following requirement documentation.</li>
-          <li>Delivered assigned integrations to production with minimal rework or rollback.</li>
+          <li>Developed flows for employee, project, and customer sync.</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="project-title">Solo Brands – OMS to Snowflake Integration Project</div>
-        <div class="project-role">Role: Boomi Integration Developer</div>
-        <div class="project-duration">Duration: Mar 2024 – Apr 2025</div>
-        <div class="project-tech">Tech: Boomi Integration, MDH, REST APIs, Snowflake</div>
+        <div class="project-title">Solo Brands – OMS → Snowflake</div>
         <ul>
-          <li>Developed and implemented 11 sub-integrations as part of migration to Boomi platform, focusing on OMS → Snowflake order data flow.</li>
-          <li>Designed ETL pipelines to extract, transform, and load OMS order data into 11 Snowflake tables.</li>
-          <li>Collaborated in a 4-member team for development, testing, deployment readiness, and production support.</li>
-          <li>Implemented error handling, logging, and monitoring for production-ready processes.</li>
-          <li>Aligned solutions with business goals for analytics, reporting, and future scalability.</li>
+          <li>Built 11 integrations to load OMS order data into Snowflake tables.</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
 
+</section> <!-- END PROJECTS -->
 
 
- <section id="contact">
+<!-- CONTACT -->
+<section id="contact">
   <h2>Contact</h2>
   <div class="card contact-card">
-
     <p>
       <i class="fas fa-envelope"></i>
-      <a href="mailto:sreeja.kandukuri2502@gmail.com">
-        sreeja.kandukuri2502@gmail.com
-      </a>
+      <a href="mailto:sreeja.kandukuri2502@gmail.com">sreeja.kandukuri2502@gmail.com</a>
     </p>
 
     <p>
@@ -249,13 +245,11 @@
         linkedin.com/in/sreeja-kandukuri-225a91262
       </a>
     </p>
-
   </div>
 </section>
 
-
 <footer>
-  <p>  Sreeja Portfolio</p>
+  <p>Sreeja Portfolio</p>
 </footer>
 
 </body>
